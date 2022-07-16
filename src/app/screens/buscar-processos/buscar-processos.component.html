@@ -1,23 +1,29 @@
-<div >
-  <p-megaMenu>
-    <img src="assets/imgs/logoDigesto.png">
+<div class="bg-black-alpha-10 hover:bg-black-alpha-20 border-round mb-4">
+    <div class="pl-6">
+      <img src="assets/imgs/logoDigesto.png">
+    </div> 
     <h2>DIGESTO</h2>
-  </p-megaMenu>
 </div>
-<div class="card">
-  <p-tabView>
-    <p-tabPanel header="Inicio">
+<div class="card bg-black-alpha-10">
+  <p-tabView  class="test bg-black-alpha-10" >
+    <p-tabPanel header="Inicio" icon="pi pi-times">
       <p>
         Bem vindo ao Digesto
       </p>
     </p-tabPanel>
     <p-tabPanel header="Base Juridica">
       <div class="p-col-12 p-md-6 p-lg-4">
-        <span>SSN</span>
+        <div>
+        <span>Procurar CNJ</span>
+      </div>
         <p-inputMask
+          #processo
           mask="9999999-99.9999.9.99.9999"
-          placeholder="999-99-9999"
+          placeholder="9999999-99.9999.9.99.9999"
         ></p-inputMask>
+      </div>
+      <div class="p-5">
+        <p-button label="Click" [routerLink]="['/tribproc', processo.value]"></p-button>
       </div>
     
     </p-tabPanel>

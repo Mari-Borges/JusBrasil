@@ -1,12 +1,12 @@
 import { AppRoutingModule } from './app-routing.module';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { BuscarProcessosComponent } from './screens/buscar-processos/buscar-processos.component';
 import {TabMenuModule} from 'primeng/tabmenu';
 import { MessageModule } from 'primeng/message';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TabViewModule } from 'primeng/tabview';
 import {InputTextModule} from 'primeng/inputtext';
@@ -15,11 +15,22 @@ import { MegaMenuModule } from 'primeng/megamenu';
 import { PanelModule } from 'primeng/panel';
 import { ReactiveFormsModule } from '@angular/forms';
 import {InputMaskModule} from 'primeng/inputmask';
+import { ProcessoComponent } from './screens/processo/processo.component';
+import {ButtonModule} from 'primeng/button';
+import { ToastModule } from 'primeng/toast';
+import { MessagesModule } from 'primeng/messages';
+
+
+
+const routes = [
+  {path: 'tribproc/:processo', Component: ProcessoComponent}
+]
 
 @NgModule({
   declarations: [
     AppComponent,
     BuscarProcessosComponent,
+    ProcessoComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +45,11 @@ import {InputMaskModule} from 'primeng/inputmask';
     MegaMenuModule,
     PanelModule,
     ReactiveFormsModule,
-    InputMaskModule
+    InputMaskModule,
+    ButtonModule,
+    RouterModule,
+    ToastModule,
+    MessagesModule
 
   ],
   providers: [],

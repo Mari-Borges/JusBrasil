@@ -1,6 +1,11 @@
 export interface IProcessos {
+
+    Processo: number;
+    title: string;
+    author: string;
+
     	
-regional_cnj: boolean;
+/* regional_cnj: boolean;
 numeroAlternativo: string;
 vara: string;
 classeNatureza: string;
@@ -41,5 +46,5 @@ classes: [];
 acessos: [];
 uf: string
 criadoEm: string;
-partes:	[];
+partes:	[]; */
 }
