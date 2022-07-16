@@ -1,6 +1,6 @@
 {
     "tribproc": [
-      { "Processo": "9999999-99.9999.9.99.9999", "title": "json-server", "author": "typicode" },
-      { "Processo": "9999999-99.9999.9.99.9991", "title": "json-server", "author": "typicode" }
+      { "Processo": "9999999-99.9999.9.99.9999" },
+      { "Processo": "9999999-99.9999.9.99.9991" }
     ]
   }
