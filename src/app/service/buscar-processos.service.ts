@@ -15,7 +15,6 @@ export class BuscarProcessosService {
 
   constructor(
     private http: HttpClient,
-    private messageService: MessageService,
   ) { }
 
   processo(processo: string){
@@ -31,15 +30,6 @@ export class BuscarProcessosService {
     );
   }
   list(){
-    return this.http.get<IProcessos[]>(`${this.API}`).subscribe(
-      resultado => {
-        console.log(resultado)
-      },
-      erro => {
-        if(erro.status == 404){
-          this.messageService.add({severity:'success', summary:'Success', detail:'Data Deleted'});
-        }
-      }
-    );
+    return this.http.get<IProcessos[]>(`${this.API}`).pipe()
   }
 }

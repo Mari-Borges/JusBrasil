@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   API: 'http://localhost:5000/tribproc',
+//  API: ' https://op.digesto.com.br/api/tribproc',
 
 };
 
