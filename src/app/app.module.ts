@@ -19,6 +19,8 @@ import { ProcessoComponent } from './screens/processo/processo.component';
 import {ButtonModule} from 'primeng/button';
 import { ToastModule } from 'primeng/toast';
 import { MessagesModule } from 'primeng/messages';
+import { DividerModule } from "primeng/divider";
+import { SplitterModule } from "primeng/splitter";
 
 
 
@@ -49,7 +51,9 @@ const routes = [
     ButtonModule,
     RouterModule,
     ToastModule,
-    MessagesModule
+    MessagesModule,
+    DividerModule,
+    SplitterModule
 
   ],
   providers: [],

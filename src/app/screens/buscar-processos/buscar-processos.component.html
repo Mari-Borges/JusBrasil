@@ -1,8 +1,8 @@
-<div class="bg-black-alpha-10 hover:bg-black-alpha-20 border-round mb-4">
+<div class="bg-black-alpha-10 hover:bg-black-alpha-20 border-round border-color: var(--surface-100) mb-4">
     <div class="pl-6">
       <img src="assets/imgs/logoDigesto.png">
     </div> 
-    <h2>DIGESTO</h2>
+    <h2 class="ml-2">DIGESTO</h2>
 </div>
 <div class="card bg-black-alpha-10">
   <p-tabView  class="test bg-black-alpha-10" >
@@ -12,6 +12,7 @@
       </p>
     </p-tabPanel>
     <p-tabPanel header="Base Juridica">
+      <div class="ml-8">
       <div class="p-col-12 p-md-6 p-lg-4">
         <div>
         <span>Procurar CNJ</span>
@@ -22,8 +23,9 @@
           placeholder="9999999-99.9999.9.99.9999"
         ></p-inputMask>
       </div>
-      <div class="p-5">
-        <p-button label="Click" [routerLink]="['/tribproc', processo.value]"></p-button>
+      <div class="pt-5">
+        <button pButton pRipple type="button" label="Danger" class="p-button-rounded p-button-danger"  [routerLink]="['/tribproc', processo.value]"></button>
+      </div>
       </div>
     
     </p-tabPanel>
